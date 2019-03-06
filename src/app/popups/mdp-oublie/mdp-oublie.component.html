@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Recevoir un mail de récupération de mot de passe</h1>
+<div mat-dialog-content class="email">
+  <mat-form-field>
+    <mat-label>Votre email</mat-label>
+    <input matInput placeholder="Votre email" [formControl]="email" >
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button>Valider</button>
+</div>
