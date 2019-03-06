@@ -1,0 +1,32 @@
+<mat-vertical-stepper linear="true" #stepper>
+    <mat-step [stepControl]="fgDonneesPerso">
+      <form [formGroup]="fgDonneesPerso">
+        <ng-template matStepLabel>Mes données personnelles</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Suivant</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fgEntreprise">
+      <form [formGroup]="fgEntreprise">
+        <ng-template matStepLabel>Mon entreprise</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Précédent</button>
+          <button mat-button matStepperNext>Suivant</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Créer mon compte</ng-template>
+        Aprés la création de votre compte, un mail de confirmation sera envoyé à votre adresse mail
+      <div>
+        <button mat-button (click)="stepper.reset()">Valider</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>

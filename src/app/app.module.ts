@@ -14,12 +14,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
+import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MdpOublieComponent
+    MdpOublieComponent,
+    CreerCompteComponent
   ],
   imports: 
   [
@@ -34,9 +37,12 @@ import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
     FormsModule,
     ReactiveFormsModule,
     MatDividerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
   ],
-  entryComponents: [MdpOublieComponent],
+  entryComponents: [
+    MdpOublieComponent,
+    CreerCompteComponent],
   exports: [ MdpOublieComponent ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@
 </mat-toolbar>
 
 <!--Log in.-->
-<div *ngIf='!userLoggedIn' class='loginDiv'>
+<div *ngIf='!userLoggedIn && interface=="login"' class='loginDiv'>
   <mat-toolbar>
     Connectez vous
   </mat-toolbar>
@@ -28,13 +28,16 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="bLoginClick()">Connexion</button>
-      <button mat-button (click)="bMDPOublieClick()">Mot de passe oublié</button>
+      <button mat-button (click)="bCreerCompteClick()">Créer un compte</button>
+      <p>
+        <button mat-button (click)="bMDPOublieClick()">Mot de passe oublié</button>
+      </p>
    </mat-card-actions>
   </mat-card>
 </div>
 <!--LoggedIn.-->
 
-<span *ngIf='userLoggedIn'>
-  Utilisateur {{sessionService.getUser().getNomUtilisateur()}} connecté !!
+<span *ngIf='!userLoggedIn && interface=="signIn"'>
+  <app-creer-compte></app-creer-compte>
 </span>
 
