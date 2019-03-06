@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -21,5 +21,7 @@ export class CreerCompteComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
+  
+
 
 }

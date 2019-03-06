@@ -16,6 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
 import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     ReactiveFormsModule,
     MatDividerModule,
     MatDialogModule,
-    MatStepperModule
+    MatStepperModule,
+    MatGridListModule
   ],
   entryComponents: [
     MdpOublieComponent,

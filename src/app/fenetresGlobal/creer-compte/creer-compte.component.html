@@ -1,10 +1,48 @@
-<mat-vertical-stepper linear="true" #stepper>
+<mat-card>
+  <mat-vertical-stepper linear="true" #stepper>
     <mat-step [stepControl]="fgDonneesPerso">
       <form [formGroup]="fgDonneesPerso">
         <ng-template matStepLabel>Mes données personnelles</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
+        <mat-grid-list cols="2" rowHeight="5:1">
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Email" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Nom" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Prénom" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Adresse" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Téléphone" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <mat-form-field>
+              <input matInput placeholder="Date de naissance" formControlName="firstCtrl" required>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+
         <div>
           <button mat-button matStepperNext>Suivant</button>
         </div>
@@ -24,9 +62,10 @@
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Créer mon compte</ng-template>
-        Aprés la création de votre compte, un mail de confirmation sera envoyé à votre adresse mail
+      Aprés la création de votre compte, un mail de confirmation sera envoyé à votre adresse mail
       <div>
         <button mat-button (click)="stepper.reset()">Valider</button>
       </div>
     </mat-step>
   </mat-vertical-stepper>
+</mat-card>

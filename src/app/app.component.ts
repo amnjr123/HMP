@@ -13,8 +13,8 @@ export class AppComponent {
 
   title = 'HMP';
 
-  userLoggedIn=false;
-  interface="login";
+  userLoggedIn;
+  interface;
   hide = true;
 
   tUser;
@@ -38,7 +38,7 @@ export class AppComponent {
       this.userLoggedIn=true;
     } else {
       this.userLoggedIn=false;
-      this.interface="main";
+      this.interface="login";
     }
     console.log(this.tUser+" "+this.tPassword);
     console.log(this.sessionService.isLoggedIn());
@@ -47,7 +47,6 @@ export class AppComponent {
   bCreerCompteClick(){
     this.userLoggedIn=false;
     this.interface="signIn";
-    console.log(this.interface);
   }
 
   bMDPOublieClick(){
@@ -58,6 +57,11 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  backButtonClick(){
+    this.userLoggedIn=false;
+    this.interface="login";
   }
 
 

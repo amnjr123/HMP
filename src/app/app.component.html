@@ -38,6 +38,9 @@
 <!--LoggedIn.-->
 
 <span *ngIf='!userLoggedIn && interface=="signIn"'>
+    <mat-toolbar>
+        <button mat-icon-button (click)="backButtonClick()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+    </mat-toolbar>
   <app-creer-compte></app-creer-compte>
 </span>
 
