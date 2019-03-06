@@ -37,7 +37,9 @@
 
           <mat-grid-tile>
             <mat-form-field>
-              <input matInput placeholder="Date de naissance" formControlName="firstCtrl" required>
+              <input matInput [matDatepicker]="picker" placeholder="Date de naissance"formControlName="firstCtrl" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
           </mat-grid-tile>
         </mat-grid-list>
@@ -52,7 +54,7 @@
       <form [formGroup]="fgEntreprise">
         <ng-template matStepLabel>Mon entreprise</ng-template>
         <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          <input matInput placeholder="SIRET" formControlName="secondCtrl" required>
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Précédent</button>

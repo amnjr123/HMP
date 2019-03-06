@@ -17,6 +17,8 @@ import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
 import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDividerModule,
     MatDialogModule,
     MatStepperModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
   ],
   entryComponents: [
     MdpOublieComponent,
