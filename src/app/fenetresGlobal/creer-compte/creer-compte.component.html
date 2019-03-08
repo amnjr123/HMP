@@ -2,48 +2,20 @@
   <mat-vertical-stepper linear="true" #stepper>
     <mat-step [stepControl]="fgDonneesPerso">
       <form [formGroup]="fgDonneesPerso">
-        <ng-template matStepLabel>Mes données personnelles</ng-template>
-        <mat-grid-list cols="2" rowHeight="5:1">
+        <ng-template matStepLabel>Mes données de connexion</ng-template>
 
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput placeholder="Email" formControlName="firstCtrl" required>
-            </mat-form-field>
-          </mat-grid-tile>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Email" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </p>
 
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput placeholder="Nom" formControlName="firstCtrl" required>
-            </mat-form-field>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput placeholder="Prénom" formControlName="firstCtrl" required>
-            </mat-form-field>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput placeholder="Adresse" formControlName="firstCtrl" required>
-            </mat-form-field>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput placeholder="Téléphone" formControlName="firstCtrl" required>
-            </mat-form-field>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <mat-form-field>
-              <input matInput [matDatepicker]="picker" placeholder="Date de naissance"formControlName="firstCtrl" required>
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-          </mat-grid-tile>
-        </mat-grid-list>
-
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Mot de passe" [type]="hide ? 'password' : 'text'" formControlName="firstCtrl"
+              required>
+          </mat-form-field>
+        </p>
 
         <div>
           <button mat-button matStepperNext>Suivant</button>
@@ -53,9 +25,40 @@
     <mat-step [stepControl]="fgEntreprise">
       <form [formGroup]="fgEntreprise">
         <ng-template matStepLabel>Mon entreprise</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="SIRET" formControlName="secondCtrl" required>
-        </mat-form-field>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="SIRET" formControlName="secondCtrl" required>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Numéro de contrat de cadre" formControlName="secondCtrl" required>
+          </mat-form-field>
+        </p>
+        <div>
+          <button mat-button matStepperPrevious>Précédent</button>
+          <button mat-button matStepperNext>Suivant</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fgDonneesPerso">
+      <form [formGroup]="fgDonneesPerso">
+        <ng-template matStepLabel>Mes données personnelles</ng-template>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Nom" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Prénom" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input matInput class="tb" placeholder="Téléphone" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </p>
         <div>
           <button mat-button matStepperPrevious>Précédent</button>
           <button mat-button matStepperNext>Suivant</button>

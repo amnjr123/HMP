@@ -14,18 +14,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
+import { MainClientComponent } from './fenetresClient/main-client/main-client.component';
 import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MdpOublieComponent,
-    CreerCompteComponent
+    CreerCompteComponent,
+    MainClientComponent
   ],
   imports: 
   [
@@ -44,12 +48,13 @@ import {MatNativeDateModule} from '@angular/material/';
     MatStepperModule,
     MatGridListModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule,
+    MatSidenavModule,
+    MatSelectModule
   ],
   entryComponents: [
     MdpOublieComponent,
     CreerCompteComponent],
-  exports: [ MdpOublieComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

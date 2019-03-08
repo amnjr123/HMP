@@ -3,6 +3,7 @@ import { SessionService } from './services/session.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
 import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
+import { MainClientComponent } from './fenetresClient/main-client/main-client.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent {
   title = 'HMP';
 
   userLoggedIn;
+  user;
   interface;
   hide = true;
 
@@ -36,6 +38,8 @@ export class AppComponent {
   bLoginClick(){
     if (this.sessionService.login(this.tUser,this.tPassword)){
       this.userLoggedIn=true;
+      this.interface="mainClient";
+      this.user=this.sessionService.getUser();
     } else {
       this.userLoggedIn=false;
       this.interface="login";

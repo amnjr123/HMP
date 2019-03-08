@@ -1,3 +1,24 @@
-<p>
-  main-client works!
-</p>
+<mat-toolbar color="disabled">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Bienvenue {{user.getNomUtilisateur()}}
+</mat-toolbar>
+
+<mat-drawer-container [hasBackdrop]="true" class="container">
+  <mat-drawer #drawer [mode]="over">
+    <mat-toolbar>
+        {{user.getNomUtilisateur()}}
+    </mat-toolbar>
+    <button class="navBarButton" mat-button><mat-icon>person</mat-icon> Mon profil</button><br>
+    <button class="navBarButton" mat-button><mat-icon>list_alt</mat-icon> Mes devis</button><br>
+    <button class="navBarButton" mat-button><mat-icon>shopping_cart</mat-icon> Mes commandes</button><br>
+    <button class="navBarButton" mat-button><mat-icon>euro_symbol</mat-icon> Mes factures</button><br>
+    <button class="navBarButton" mat-button><mat-icon>date_range</mat-icon> Calendrier</button><br>
+    <button class="navBarButton" mat-button><mat-icon>inbox</mat-icon> Inbox</button>
+  </mat-drawer>
+  <mat-drawer-content>
+
+
+  </mat-drawer-content>
+</mat-drawer-container>

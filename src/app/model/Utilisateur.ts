@@ -7,7 +7,7 @@ export class Utilisateur {
     constructor(){
         this.login="1";
         this.password="1";
-        this.nomUtilisateur="TEST USER";
+        this.nomUtilisateur="Amine";
     }
 
     getLogin(){

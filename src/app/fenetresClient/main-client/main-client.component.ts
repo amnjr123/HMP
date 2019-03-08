@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { userInfo } from 'os';
 
 @Component({
   selector: 'app-main-client',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainClientComponent implements OnInit {
 
+  @Input()
+  user;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
