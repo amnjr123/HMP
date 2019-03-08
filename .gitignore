@@ -44,3 +44,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/BackEnd/HMP/nbproject/private/
+/BackEnd/HMP/HMP-war/nbproject/private/
+/BackEnd/HMP/HMP-ejb/nbproject/private/
+/BackEnd/HMP/HMP-ejb/build/
+/BackEnd/HMP/HMP-war/build/
+/BackEnd/HMP/HMP-ejb/dist/
+/BackEnd/HMP/build/
+/BackEnd/HMP/dist/
+/BackEnd/HMP/HMP-war/dist/
