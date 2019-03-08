@@ -4,6 +4,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { MdpOublieComponent } from './popups/mdp-oublie/mdp-oublie.component';
 import { CreerCompteComponent } from './fenetresGlobal/creer-compte/creer-compte.component';
 import { MainClientComponent } from './fenetresClient/main-client/main-client.component';
+import { Config } from 'protractor';
 
 @Component({
   selector: 'app-root',
@@ -22,11 +23,18 @@ export class AppComponent {
   tUser;
   tPassword;
 
+
   constructor(private sessionService:SessionService,public dialog: MatDialog ){
 
   }
 
   ngOnInit(){
+    this.sessionService.getServlet()
+    .subscribe((data: Config) => this.user = {
+        user : data
+    });
+    console.log(this.user);
+
     if(this.sessionService.isLoggedIn()){
       this.userLoggedIn=true;
     } else {
